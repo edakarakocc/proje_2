@@ -30,6 +30,7 @@ class Doktor(Personel):
         if oran < 0:
             print("Oran pozitif olmalıdır.")
             return
-        zamli_maas = self.get_maas() + self.get_maas() * oran/100
+        prim = self.get_maas() * (self.__deneyim_yili/10)
+        zamli_maas = self.get_maas() + self.get_maas() * (oran/100) + prim
         self.set_maas(zamli_maas)
         
