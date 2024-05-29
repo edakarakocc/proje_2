@@ -6,29 +6,29 @@ class Personel:
         self.__departman = departman
         self.__maas = maas
     
-    def get__personel_no(self):
+    def get_personel_no(self):
         return self.__personel_no
-    def set__personel_no(self,personel_no):
+    def set_personel_no(self,personel_no):
         self.__personel_no = personel_no
     
-    def get__ad(self):
+    def get_ad(self):
         return self.__ad
-    def set__ad(self,ad):
+    def set_ad(self,ad):
         self.__ad = ad
 
-    def get__soyad(self):
+    def get_soyad(self):
         return self.__soyad
-    def set__soyad(self,soyad):
+    def set_soyad(self,soyad):
         self.__soyad = soyad
 
-    def get__departman(self):
+    def get_departman(self):
         return self.__departman
-    def set__departman(self,departman):
+    def set_departman(self,departman):
         self.__departman = departman    
 
-    def get__maas(self):
+    def get_maas(self):
         return self.__maas
-    def set__maas(self,maas):
+    def set_maas(self,maas):
         self.__maas = maas   
         
     def __str__(self):
