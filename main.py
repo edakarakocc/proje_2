@@ -22,6 +22,27 @@ try:
     hasta2 = hasta.Hasta(1283,"Eslem","Tufan","10.02.2012","Vertigo",None,"Erkan Esen","Aslı Demir")
     hasta3 = hasta.Hasta(102,"Ayşe","Kuş","20.07.2010","Obezite","Mide Ameliyatı","Ezgi Karakoç",None)
     hastalar = [hasta1,hasta2,hasta3]
-            
+    
+    personelBilgi = []
+    for personel in personeller:
+        personelBilgi.append((personel.get_personel_no(),personel.get_ad(),personel.get_soyad(),personel.get_departman(),personel.get_maas()))
+    doktorBilgi = []
+    for doktor in doktorlar:
+        doktorBilgi.append((doktor.get_personel_no(),doktor.get_ad(),doktor.get_soyad(),doktor.get_departman(),doktor.get_maas(),doktor.get_uzmanlik(),doktor.get_deneyim_yili(),doktor.get_hastane()))
+    hemsireBilgi = []
+    for hemsire in hemsireler:
+        hemsireBilgi.append((hemsire.get_personel_no(),hemsire.get_ad(),hemsire.get_soyad(),hemsire.get_departman(),hemsire.get_maas(),hemsire.get_calisma_saati(),hemsire.get_hastane()))
+    hastaBilgi = []
+    for hasta in hastalar:
+        hastaBilgi.append((hasta.get_hasta_no(),hasta.get_ad(),hasta.get_soyad(),hasta.get_dogum_tarihi(),hasta.get_hastalik(),hasta.get_tedavi(),hasta.get_doktor(),hasta.get_hemsire()))
+    
+    bilgiler = personelBilgi + doktorBilgi + hemsireBilgi + hastaBilgi
+    
+    columns = ["personel_no","ad","soyad","departman","maas","uzmanlik","deneyim_yili","hastane","calisma_saati","sertifika","hasta_no","dogum_tarihi","hastalik","tedavi"]
+    df = pd.DataFrame(bilgiler, columns=columns)    
+    df.fillna(0,inplace=True)
+    print(df)
+        
+           
 except Exception as e:
     print("Bir hata oluştu:", e)
