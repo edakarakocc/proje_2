@@ -1,0 +1,1 @@
+df["personel_no"]>1]
