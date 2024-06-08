@@ -29,7 +29,7 @@ class Personel:
     def get_maas(self):
         return self.__maas
     def set_maas(self,maas):
-        self.__maas = maas   
+        self.__maas = maas
         
     def __str__(self):
         personel_bilgi = f"Ad: {self.__ad}, Soyad: {self.__soyad}, Personel No: {self.__personel_no}, Depratman: {self.__departman}, Maaş: {self.__maas}"
